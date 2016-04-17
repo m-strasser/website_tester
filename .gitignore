@@ -5,6 +5,13 @@
 # http://www.opensource.org/licenses/GPL-license
 # Copyright (c) 2016, Michael Strasser <mst1409@gmx.at>
 
+# Virtualenv folders
+bin/
+include/
+pip-selfcheck.json
+
+man/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
