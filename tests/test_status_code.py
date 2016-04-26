@@ -1,5 +1,6 @@
 from tests.base import TestCase
 from website_tester.website_tester import WebSiteTester
+import unittest
 
 
 class TestStatusCode(TestCase):
@@ -20,14 +21,8 @@ class TestStatusCode(TestCase):
         is_up = self.broken_website_tester.is_up()
         self.assertEqual(is_up, False)
 
-    def test_200(self):
-        """See if running website returns valid status code."""
-        is_up = self.website_tester.check_status_code()
+    def test_get_statuscode(self):
+        """See if statuscode is correctly saved."""
+        self.assertEqual(self.website_tester.status_code, 200)
+        self.assertEqual(self.broken_website_tester.status_code, 404)
 
-        self.assertEqual(is_up, True)
-
-    def test_404(self):
-        """See if non-existent page returns invalid status code."""
-        is_up = self.broken_website_tester.check_status_code()
-
-        self.assertEqual(is_up, False)
