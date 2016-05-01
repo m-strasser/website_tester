@@ -15,7 +15,7 @@ class TestContent(TestCase):
         is_down = self.broken_website_tester.content_is_up()
 
         self.assertEqual(is_up, True)
-        self.assertEqual(is_down, False)
+        self.assertEqual(is_down, True)
 
     def test_can_reach_all(self):
         """Extensive test if reachable content is correctly detected."""
