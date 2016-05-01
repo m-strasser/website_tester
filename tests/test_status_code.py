@@ -3,6 +3,7 @@ from website_tester.website_tester import WebSiteTester
 import unittest
 
 
+# TODO: Set up local webserver for testing
 class TestStatusCode(TestCase):
     """Testclass for status code checker."""
 
@@ -25,4 +26,4 @@ class TestStatusCode(TestCase):
         """See if statuscode is correctly saved."""
         self.assertEqual(self.website_tester.status_code, 200)
         self.assertEqual(self.broken_website_tester.status_code, 404)
-
+        self.assertEqual(self.website_tester.status_code, 200)
