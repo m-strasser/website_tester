@@ -13,6 +13,7 @@ from website_tester import __version__
 
 tests_require = [
     'urltools',
+    'requests',
     'mock',
     'nose',
     'coverage',
