@@ -12,6 +12,7 @@ from setuptools import setup, find_packages
 from website_tester import __version__
 
 tests_require = [
+    'urltools',
     'mock',
     'nose',
     'coverage',
